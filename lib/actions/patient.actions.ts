@@ -15,6 +15,7 @@ export const createUser = async (user: CreateUserParams) => {
         undefined,
         user.name
       );
+      console.log(ID.unique());
       console.log(newuser)
   
       return parseStringify(newuser)
@@ -51,15 +52,20 @@ export const getUser = async (userId: string) => {
 
 
 export const getPatient = async (userId: string) => {
+  console.log("DATABASE_ID:", DATABASE_ID);
+console.log("PATIENT_COLLECTION_ID:", PATIENT_COLLECTION_ID);
+console.log("Query Condition:", [Query.equal("userId", userId)]);
+console.log("User ID type:", typeof userId);
+
   try {
     const patients = await databases.listDocuments(
       DATABASE_ID!,
       PATIENT_COLLECTION_ID!,
-      [
-        Query.equal('userId',userId)
-      ]
-
+      [Query.equal('userId',userId)]
+      
     )
+    console.log(patients);
+    console.log("Received patient data:", patients.documents);
 
     return parseStringify(patients.documents[0]);
   } catch (error) {
@@ -69,6 +75,43 @@ export const getPatient = async (userId: string) => {
     );
   }
 };
+
+// export const getPatient = async (userId: string) => {
+//   console.log("Getting patient for userId:", userId);
+//   console.log("DATABASE_ID:", DATABASE_ID);
+//   console.log("PATIENT_COLLECTION_ID:", PATIENT_COLLECTION_ID);
+//   console.log("Querying userId:", userId);
+  
+
+//   try {
+//       const patients = await databases.listDocuments(
+//           DATABASE_ID!,
+//           PATIENT_COLLECTION_ID!,
+//           [Query.equal('userId', userId)]
+//       );
+     
+
+//       console.log("Fetched patients:", patients);
+
+//       if (patients.total === 0) {
+//           console.error("No patient found for userId:", userId);
+//           return null;
+//       }
+
+//       // Example: Select the latest document based on the 'Updated' field
+//       const sortedPatients = patients.documents.sort(
+//           (a, b) => new Date(b.$updatedAt).getTime() - new Date(a.$updatedAt).getTime()
+//       );
+
+//       const latestPatient = sortedPatients[0]; // Select the most recent document
+//       console.log("Latest patient:", latestPatient);
+
+//       return parseStringify(latestPatient);
+//   } catch (error) {
+//       console.error("An error occurred while retrieving the user details:", error);
+//       return null;
+//   }
+// };
 
 export const registerPatient = async ({
   identificationDocument,

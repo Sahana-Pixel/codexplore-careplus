@@ -7,7 +7,13 @@ import Image from "next/image";
 
 export default async function NewAppointment({params:{userId}}:SearchParamProps) {
     const patient =await getPatient (userId);
-    
+    if (!patient) {
+      console.error("Patient not found");
+      return <div>Patient not found</div>;
+  }
+  
+    console.log(patient)
+    console.log("getpatient");
     return (
     <div className="flex h-screen max-h-screen">
      <section className="remove-scrollbar container my-auto">
@@ -20,6 +26,8 @@ export default async function NewAppointment({params:{userId}}:SearchParamProps)
       className="mb-12 h-10 w-fit"
       />
 
+      
+      
       <AppointmentForm
         type="create"
         userId= {userId}

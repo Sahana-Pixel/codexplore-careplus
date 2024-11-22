@@ -39,6 +39,7 @@ export const PATIENT_COLLECTION_ID = '670a82d2000a9a80c3fc';
 export const DOCTOR_COLLECTION_ID = '670a83b30023217a4e15';
 export const APPOINTMENT_COLLECTION_ID = '670a84a10011b47260d3';
 export const BUCKET_ID = '670a866f0028e4b380cd';
+export const NEXT_PUBLIC_ADMIN_PASSKEY= '123456';
 // export const NEXT_PUBLIC_ADMIN_PASSKEY= 123456
 console.log("Appwrite Endpoint:", ENDPOINT);
 

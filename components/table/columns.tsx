@@ -82,6 +82,7 @@ export const columns: ColumnDef<Appointment>[] = [
         id: "actions",
         header: () => <div className="pl-4">Actions</div>,
         cell: ({ row:{original:data} }) => {
+          console.log( data.userId)
          
           return (
             <div className="flex gap-1">
@@ -107,3 +108,4 @@ export const columns: ColumnDef<Appointment>[] = [
         },
       },
     ];
+

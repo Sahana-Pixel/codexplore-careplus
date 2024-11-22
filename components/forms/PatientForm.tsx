@@ -13,6 +13,7 @@ import { UserFormValidation } from "@/lib/validation"
 import { useRouter } from "next/navigation";
 
 import { createUser } from "@/lib/actions/patient.actions"
+import { log } from "console"
 
 
 
@@ -34,15 +35,18 @@ export const PatientForm = () => {
  
   
   async function onSubmit({name,email,phone}: z.infer<typeof UserFormValidation>) {
-
+    console.log("onSubmit, name: " + name)
     setIsLoading(true)
     // setErrorMessage(""); // Reset error message on new submission
 
     try{
        const userData ={name,email,phone}
        const user =await createUser(userData)
-
-       if(user) router.push(`/patients/${user.$id}/register`)
+      console.log("user created successfully");
+      
+       if(user)
+        console.log(user)
+         router.push(`/patients/${user.$id}/register`)
        } catch (error) {
         console.log(error);
         // setErrorMessage('User creation failed. Please try again.'); // Set error message for UI
@@ -65,7 +69,7 @@ export const PatientForm = () => {
           control={form.control}
           name="name"
           label="Full name"
-          placeholder="Sahana"
+          placeholder="john"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />

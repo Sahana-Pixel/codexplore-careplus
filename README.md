@@ -1,114 +1,74 @@
-'use client'
+npx create-next-app@latest ./
+enter for all
+npm install @next/font
+npm install clsx tailwind-merge
+npm install tailwindcss-animate
+npx shadcn@latest init
+npx shadcn@latest add button
+npm install next-themes
+npx shadcn@latest add form
+npx shadcn@latest add input
 
-import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-  } from "@/components/ui/alert-dialog"
-  import {
-    InputOTP,
-    InputOTPGroup,
-    InputOTPSeparator,
-    InputOTPSlot,
-  } from "@/components/ui/input-otp"
-import { encryptKey } from "@/lib/utils";
-  
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-// import { NEXT_PUBLIC_ADMIN_PASSKEY } from "../appwrite.config"; 
+npm install react-phone-number-input --save
 
-const PasskeyModal = () => {
-    const router = useRouter();
-    const [open, setOpen] = useState(true);
-    const [passkey, setPasskey] = useState("");
-    const [error, setError] = useState("");
-    const path = usePathname();
+npm install node-appwrite
 
-    const encryptedKey =
-    typeof window !== "undefined"
-      ? window.localStorage.getItem("accessKey")
-      : null;
+https://cloud.appwrite.io/v1
 
-      useEffect(() => {
+npx shadcn@latest add radio-group
+npx shadcn@latest add select
+npx shadcn@latest add textarea
+npx shadcn@latest add checkbox
 
-      }, [encryptedKey]);
+npx shadcn@latest add alert-dialog
+npx shadcn@latest add input-otp
+npx shadcn@latest add table
+npm install @tanstack/react-table
+npx shadcn@latest add dropdown-menu
+npx shadcn@latest add dialog
 
 
-    const closeModal = () => {
-        setOpen(false);
-        router.push("/");
-      };
 
-      const validatePasskey = (
-        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-      ) => {
-        e.preventDefault();
-    
-        if (passkey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY) {
-          const encryptedKey = encryptKey(passkey);
-    
-          localStorage.setItem("accessKey", encryptedKey);
-    
-          setOpen(false);
-        } else {
-          setError("Invalid passkey. Please try again.");
-        }
-      };
-     
-  return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
-  <AlertDialogContent className="shad-alert-dialog">
-    <AlertDialogHeader>
-      <AlertDialogTitle  className="flex items-start justify-between">Admin Access Verification
-      <Image
-              src="/assets/icons/close.svg"
-              alt="close"
-              width={20}
-              height={20}
-              onClick={() => closeModal()}
-              className="cursor-pointer"
-            />
-      </AlertDialogTitle>
-      <AlertDialogDescription>
-      To access the admin page, please enter the passkey.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <div>
-    <InputOTP maxLength={6} value={passkey} onChange={(value) => setPasskey(value)}>
-    <InputOTPGroup className="shad-otp">
-    <InputOTPSlot className="shad-otp-slot" index={0} />
-    <InputOTPSlot className="shad-otp-slot" index={1} />
-    <InputOTPSlot className="shad-otp-slot" index={2} />
-    <InputOTPSlot className="shad-otp-slot" index={3} />
-    <InputOTPSlot className="shad-otp-slot" index={4} />
-    <InputOTPSlot className="shad-otp-slot" index={5} />    
-  </InputOTPGroup>
-</InputOTP>
+npm install react-datepicker --save
 
-    {error && (
-            <p className="shad-error text-14-regular mt-4 flex justify-center">
-              {error}
-            </p>
-          )}
-    </div>
-    <AlertDialogFooter>
-      <AlertDialogAction
-      onClick={(e) => validatePasskey(e)}
-      className="shad-primary-btn w-full">
-      Enter Admin Passkey
-      </AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
 
-  )
-}
+react dropzone :
+npm install --save react-dropzone
 
-export default PasskeyModal
+ctrl+p to search file
+ctrl+shift+f to searfch word
+
+
+
+extra features
+npx shadcn@latest add card
+
+
+
+
+to install sanitry
+npx @sentry/wizard@latest -i nextjs --saas --org js-mastery-6x --project javascript-nextjs
+
+
+
+key 
+iOiJodHRwczovL2RlLnNlbnRyeS5pbyIsIm9yZyI6ImpzLW1hc3RlcnktNngifQ==_l9tJyYQn/b0jlfYktI4EVZ3hcu7KrDD/daA3YIISUX0
+
+recovery twiio
+YHESFU1QT55NFD3H1918RK97
+
+
+
+
+
+
+map:
+npm install leaflet
+npm install react-leaflet
+
+
+
+
+
+
+

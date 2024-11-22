@@ -5,7 +5,22 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
+// export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
+
+export const parseStringify = (data: unknown) => {
+  if (!data) {
+    console.error("Data is undefined or null. Cannot parse.");
+    return null;
+  }
+
+  try {
+    return JSON.parse(JSON.stringify(data));
+  } catch (error) {
+    console.error("Error parsing data:", error);
+    return null;
+  }
+};
+
 
 export const convertFileToUrl = (file: File) => URL.createObjectURL(file);
 

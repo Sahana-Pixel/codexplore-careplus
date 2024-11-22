@@ -62,15 +62,43 @@ export const RegisterForm = ({ user }: { user: User }) => {
       formData.append('fileName',values.identificationDocument[0].name)
 
     }
-    try{
-      const patientData= {
-        ...values,
+    // try{
+    //   const patientData= {
+    //     ...values,
+    //     userId: user.$id,
+    //     birthDate: new Date(values.birthDate),
+    //     identificationDocument: formData,
+    //   }
+
+    try {
+      const patientData = {
         userId: user.$id,
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
         birthDate: new Date(values.birthDate),
-        identificationDocument: formData,
-      }
+        gender: values.gender,
+        address: values.address,
+        occupation: values.occupation,
+        emergencyContactName: values.emergencyContactName,
+        emergencyContactNumber: values.emergencyContactNumber,
+        primaryPhysician: values.primaryPhysician,
+        insuranceProvider: values.insuranceProvider,
+        insurancePolicyNumber: values.insurancePolicyNumber,
+        allergies: values.allergies,
+        currentMedication: values.currentMedication,
+        familyMedicalHistory: values.familyMedicalHistory,
+        pastMedicalHistory: values.pastMedicalHistory,
+        identificationType: values.identificationType,
+        identificationNumber: values.identificationNumber,
+        identificationDocument: values.identificationDocument
+          ? formData
+          : undefined,
+        privacyConsent: values.privacyConsent,
+      };
+
        
-      // @ts-ignore
+      
       const patient = await registerPatient(patientData);
       if(patient) router.push(`/patients/${user.$id}/new-appointment`)
 
@@ -133,7 +161,7 @@ export const RegisterForm = ({ user }: { user: User }) => {
           control={form.control}
           name="name"
           label="Full name"
-          placeholder="Sahana"
+          placeholder="john"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />
@@ -144,7 +172,7 @@ export const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="email"
               label="Email address"
-              placeholder="sahana@gmail.com"
+              placeholder="john@gmail.com"
               iconSrc="/assets/icons/email.svg"
               iconAlt="email"
             />

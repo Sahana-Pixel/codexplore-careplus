@@ -24,24 +24,17 @@ CarePlus is an innovative healthcare platform designed to simplify appointment s
 
 ## 📂 Project Structure
 
-CarePlus/ 
-   ├── components/ 
-   # Reusable UI components 
-   ├── pages/ 
-   # Application pages 
-   ├── lib/ 
-   # Utilities and helpers 
-   ├── types/ 
-   # TypeScript type definitions 
-   ├── public/ 
-   # Static assets 
-   ├── styles/ 
-   # Tailwind CSS styles 
-   └── constants/ 
-   # Shared constants
+CarePlus/
+│
+├── components/           # Reusable UI components
+├── pages/                # Application pages
+├── lib/                  # Utilities and helpers
+├── types/                # TypeScript type definitions
+├── public/               # Static assets
+├── styles/               # Tailwind CSS styles
+└── constants/            # Shared constants
 
-bash
-Copy code
+
 
 ## ⚙️ Setup and Installation
 

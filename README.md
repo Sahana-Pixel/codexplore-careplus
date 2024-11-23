@@ -1,12 +1,9 @@
-# CarePulse: An Online Appointment System 🏥
+# CarePlus: An Online Appointment System 🏥
 
-![CarePulse Banner](./public/assets/images/banner.png) <!-- Replace with your actual image path or URL -->
+![CarePlus Banner](./public/assets/images/banner.png) <!-- Replace with your actual image path or URL -->
 
-CarePulse is an innovative healthcare platform designed to simplify appointment scheduling and enhance communication between patients and doctors. Developed during the **Hackloop Hackathon**, this project leverages cutting-edge technology to create a seamless experience for users.
+CarePlus is an innovative healthcare platform designed to simplify appointment scheduling and enhance communication between patients and doctors. Developed during the **Hackloop Hackathon**, this project leverages cutting-edge technology to create a seamless experience for users.
 
-# CarePulse: Online Appointment System
-
-CarePulse is an advanced online appointment scheduling platform designed for healthcare. It enables patients to book appointments, manage their health records, and connect with their primary physicians seamlessly.
 
 ## 🚀 Features
 
@@ -27,7 +24,21 @@ CarePulse is an advanced online appointment scheduling platform designed for hea
 
 ## 📂 Project Structure
 
-CarePulse/ ├── components/ # Reusable UI components ├── pages/ # Application pages ├── lib/ # Utilities and helpers ├── types/ # TypeScript type definitions ├── public/ # Static assets ├── styles/ # Tailwind CSS styles └── constants/ # Shared constants
+CarePlus/ 
+├── components/ 
+# Reusable UI components 
+├── pages/
+# Application pages 
+├── lib/ 
+# Utilities and helpers 
+├── types/ 
+# TypeScript type definitions 
+├── public/ 
+# Static assets 
+├── styles/ 
+# Tailwind CSS styles 
+└── constants/ 
+# Shared constants
 
 bash
 Copy code
@@ -36,8 +47,8 @@ Copy code
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/carepulse.git
-   cd carepulse
+   git clone https://github.com/Sahana-Pixel/codexplore-careplus.git
+   cd codexplore-careplus
 Install dependencies:
 
 bash

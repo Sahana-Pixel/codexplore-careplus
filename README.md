@@ -86,42 +86,17 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
 
-bash
-Copy code
-npm install
-Set up environment variables: Create a .env.local file in the root directory with the following:
-
-makefile
-Copy code
-NEXT_PUBLIC_APPWRITE_ENDPOINT=<Your Appwrite Endpoint>
-NEXT_PUBLIC_APPWRITE_PROJECT=<Your Appwrite Project ID>
-TWILIO_ACCOUNT_SID=<Your Twilio Account SID>
-TWILIO_AUTH_TOKEN=<Your Twilio Auth Token>
-Run the development server:
-
-bash
-Copy code
-npm run dev
-Open http://localhost:3000 in your browser to see the application.
-
 ## 🧩 Features in Detail
-- **For Patients**
-- Secure patient registration with OTP verification
-- Manage personal and medical details
-- View, schedule, and cancel appointments
-- **For Doctors**
-- View upcoming appointments
-- Approve or reject appointment requests
-- Manage patient details and notes
-- **Admin Features**
-- Manage patient records
-- Handle cancellation and scheduling policies
+- **For Patients**: Secure patient registration with OTP verification, Manage personal and medical details, View, schedule, and cancel appointments
+- **For Doctors**: View upcoming appointments, Approve or reject appointment requests, Manage patient details and notes
+- **Admin Features**: Manage patient records, Handle cancellation and scheduling policies
 
 ## 🙌 Acknowledgements
 - Appwrite for the backend framework
 - Twilio for SMS and OTP services
 - Next.js for powering the frontend
 - The open-source community for the libraries and tools used
+
 Made with ❤️ by CodeXplore team
 
 

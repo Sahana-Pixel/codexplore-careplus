@@ -1,3 +1,9 @@
+# CarePulse: An Online Appointment System 🏥
+
+![CarePulse Banner](./public/assets/images/banner.png) <!-- Replace with your actual image path or URL -->
+
+CarePulse is an innovative healthcare platform designed to simplify appointment scheduling and enhance communication between patients and doctors. Developed during the **Hackloop Hackathon**, this project leverages cutting-edge technology to create a seamless experience for users.
+
 # CarePulse: Online Appointment System
 
 CarePulse is an advanced online appointment scheduling platform designed for healthcare. It enables patients to book appointments, manage their health records, and connect with their primary physicians seamlessly.

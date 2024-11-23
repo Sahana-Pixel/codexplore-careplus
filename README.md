@@ -25,7 +25,6 @@ CarePlus is an innovative healthcare platform designed to simplify appointment s
 ## 📂 Project Structure
 
 CarePlus/
-│
 ├── components/           # Reusable UI components
 ├── pages/                # Application pages
 ├── lib/                  # Utilities and helpers

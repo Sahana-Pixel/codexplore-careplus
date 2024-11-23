@@ -106,23 +106,22 @@ Open http://localhost:3000 in your browser to see the application.
 
 ## 🧩 Features in Detail
 - **For Patients**
-Secure patient registration with OTP verification
-Manage personal and medical details
-View, schedule, and cancel appointments
+- Secure patient registration with OTP verification
+- Manage personal and medical details
+- View, schedule, and cancel appointments
 - **For Doctors**
-View upcoming appointments
-Approve or reject appointment requests
-Manage patient details and notes
+- View upcoming appointments
+- Approve or reject appointment requests
+- Manage patient details and notes
 - **Admin Features**
-Manage patient records
-Handle cancellation and scheduling policies
+- Manage patient records
+- Handle cancellation and scheduling policies
 
 ## 🙌 Acknowledgements
-Appwrite for the backend framework
-Twilio for SMS and OTP services
-Next.js for powering the frontend
-The open-source community for the libraries and tools used
+- Appwrite for the backend framework
+- Twilio for SMS and OTP services
+- Next.js for powering the frontend
+- The open-source community for the libraries and tools used
 Made with ❤️ by CodeXplore team
 
-markdown
-Copy code
+

@@ -89,4 +89,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 - Next.js for powering the frontend
 - The open-source community for the libraries and tools used
 
+## 🌐 Live Demo
+
+Explore the fully functional application here: [CarePlus](https://codexplore-careplus-a8r2.vercel.app)
+
 Made with ❤️ by CodeXplore team
